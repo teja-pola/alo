@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent 
+           text-sm font-medium rounded-md shadow-sm transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 
+           focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-gray-700 border-gray-300 
+           hover:bg-gray-50 focus:ring-primary-500;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 
+           focus:ring-red-500;
+  }
+
+  /* Input Styles */
+  .form-input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm 
+           focus:border-primary-500 focus:ring-primary-500 
+           disabled:bg-gray-100 disabled:cursor-not-allowed
+           sm:text-sm;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden
+           transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-md hover:-translate-y-1;
+  }
+
+  /* Layout Utilities */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .heading-2 {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+
+  .heading-3 {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+
+  /* Animation Classes */
+  .fade-in {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+
+  .slide-up {
+    @apply transform transition-transform duration-300 ease-in-out;
+  }
+
+  /* Form Elements */
+  .form-group {
+    @apply space-y-1;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-red-600;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-500 hover:text-gray-900 px-3 py-2 text-sm font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-primary-600 font-semibold;
+  }
+
+  /* Filters */
+  .filter-checkbox {
+    @apply h-4 w-4 text-primary-600 focus:ring-primary-500 
+           border-gray-300 rounded;
+  }
+
+  .filter-label {
+    @apply ml-2 text-sm text-gray-700;
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* Loading States */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-gray-300 
+           border-t-primary-600;
+  }
+
+  /* Responsive Images */
+  .img-responsive {
+    @apply w-full h-full object-cover;
+  }
+}
+
+/* Custom Scrollbar */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400;
+  }
+} 

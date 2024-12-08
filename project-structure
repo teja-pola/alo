@@ -1,0 +1,60 @@
+alo-meal-plans/
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── assets/
+│   └── src/
+│       ├── components/
+│       │   ├── common/
+│       │   │   ├── Button.jsx
+│       │   │   ├── Input.jsx
+│       │   │   ├── Card.jsx
+│       │   │   └── Modal.jsx
+│       │   ├── layout/
+│       │   │   ├── Header.jsx
+│       │   │   ├── Footer.jsx
+│       │   │   └── Sidebar.jsx
+│       │   ├── auth/
+│       │   │   ├── LoginForm.jsx
+│       │   │   └── SignupForm.jsx
+│       │   ├── search/
+│       │   │   ├── SearchBar.jsx
+│       │   │   └── Filters.jsx
+│       │   └── booking/
+│       │       ├── MealPlanCard.jsx
+│       │       └── PaymentForm.jsx
+│       ├── pages/
+│       │   ├── Home.jsx
+│       │   ├── Search.jsx
+│       │   ├── RestaurantDetails.jsx
+│       │   ├── Checkout.jsx
+│       │   └── Profile.jsx
+│       ├── context/
+│       │   ├── AuthContext.jsx
+│       │   └── BookingContext.jsx
+│       ├── hooks/
+│       │   ├── useAuth.js
+│       │   └── useBooking.js
+│       ├── services/
+│       │   ├── api.js
+│       │   └── auth.js
+│       ├── utils/
+│       │   ├── constants.js
+│       │   └── helpers.js
+│       ├── styles/
+│       │   └── index.css
+│       └── App.jsx
+├── backend/
+│   ├── src/
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Restaurant.js
+│   │   │   ├── MealPlan.js
+│   │   │   └── Booking.js
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── middleware/
+│   │   └── config/
+│   └── package.json
+├── package.json
+└── README.md 
